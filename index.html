@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jabez Wekesa | Software Engineer</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     /* General Styles */
     body {
@@ -187,6 +188,10 @@
         font-size: 18px;
     }
 
+    .contact ul li {
+        margin-bottom: 15px;
+    }
+
     .contact ul li a {
         color: #2575fc;
         font-weight: bold;
@@ -194,6 +199,11 @@
 
     .contact ul li a:hover {
         text-decoration: underline;
+    }
+
+    .contact i {
+        margin-right: 10px;
+        font-size: 20px;
     }
 
     /* Footer Section */
@@ -221,6 +231,44 @@
         }
         to {
             opacity: 1;
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar a {
+            margin: 5px 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .cta a {
+            font-size: 16px;
+            padding: 12px 24px;
+        }
+
+        .skill-list {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .contact ul li {
+            font-size: 16px;
         }
     }
   </style>
@@ -264,19 +312,19 @@
     <div class="gallery">
       <div>
         <img src="IMG_20250115_231231_975.webp" alt="Photo 1">
-        <p class="image-caption"></p>
+        <p class="image-caption">At Ollaro Resort in Simba Drive Ongata Rongai</p>
       </div>
       <div>
         <img src="meandbro.jpg" alt="Photo 2">
-        <p class="image-caption"></p>
+        <p class="image-caption">Graduation Day with Big Bro</p>
       </div>
       <div>
         <img src="megraduate.jpg" alt="Photo 3">
-        <p class="image-caption"></p>
+        <p class="image-caption">Me in a Gown></p>
       </div>
       <div>
         <img src="Snapchat-2103323768.jpg" alt="Photo 4">
-        <p class="image-caption"></p>
+        <p class="image-caption">A Good Weather Out</p>
       </div>
     </div>
   </div>
@@ -285,11 +333,11 @@
   <div id="contact" class="contact">
     <h2>Contact Me</h2>
     <ul>
-      <li>Phone: <a href="tel:0112981529">0112981529</a></li>
-      <li>WhatsApp: <a href="https://wa.me/0112981529" target="_blank">Chat on WhatsApp</a></li>
-      <li>Instagram: <a href="https://www.instagram.com/infinitejabez" target="_blank">infinitejabez</a></li>
-      <li>Facebook: <a href="https://www.facebook.com/share/15XGimMx5G" target="_blank">Facebook Profile</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/jabez-wekesa-a44587328" target="_blank">LinkedIn Profile</a></li>
+      <li><i class="fas fa-phone-alt"></i>Phone: <a href="tel:+254112981529">+254 112 981 529</a></li>
+      <li><i class="fab fa-whatsapp"></i>WhatsApp: <a href="https://wa.me/254112981529" target="_blank">Chat on WhatsApp</a></li>
+      <li><i class="fab fa-instagram"></i>Instagram: <a href="https://www.instagram.com/infinitejabez" target="_blank">infinitejabez</a></li>
+      <li><i class="fab fa-facebook"></i>Facebook: <a href="https://www.facebook.com/share/15XGimMx5G" target="_blank">Facebook Profile</a></li>
+      <li><i class="fab fa-linkedin"></i>LinkedIn: <a href="https://www.linkedin.com/in/jabez-wekesa-a44587328" target="_blank">LinkedIn Profile</a></li>
     </ul>
   </div>
 
