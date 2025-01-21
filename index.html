@@ -7,79 +7,208 @@
   <style>
     /* General Styles */
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Poppins', Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background: #f9f9f9;
+        background: #f0f4f8;
+        color: #333;
+        line-height: 1.6;
+        scroll-behavior: smooth;
     }
-  
+
+    a {
+        text-decoration: none;
+    }
+
+    h1, h2 {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #2d2d2d;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        color: white;
+        margin: 0 15px;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+        color: #f39c12;
+    }
+
+    .navbar .brand {
+        font-size: 24px;
+        font-weight: bold;
+        color: #f39c12;
+    }
+
     /* Hero Section */
     .hero {
         text-align: center;
-        padding: 100px 20px;
-        background: #2d2d2d;
+        padding: 120px 20px;
+        background: linear-gradient(to right, #6a11cb, #2575fc);
         color: white;
     }
-  
+
     .hero h1 {
-        font-size: 50px;
-        margin: 0;
+        font-size: 64px;
+        margin-bottom: 20px;
+        animation: fadeIn 1.5s ease-in-out;
     }
-  
+
     .hero p {
-        font-size: 18px;
-        margin: 15px 0;
-        color: #dddddd;
+        font-size: 20px;
+        margin-bottom: 30px;
+        color: #eeeeee;
     }
-  
-    .cta {
-        margin-top: 20px;
-    }
-  
+
     .cta a {
-        text-decoration: none;
         color: white;
-        background: #0078d7;
-        padding: 12px 24px;
-        border-radius: 6px;
-        font-size: 16px;
+        background: #f39c12;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: background 0.3s;
     }
-  
+
+    .cta a:hover {
+        background: #e67e22;
+    }
+
     /* Skills Section */
     .skills {
         text-align: center;
-        padding: 50px 20px;
+        padding: 60px 20px;
         background: #ffffff;
         color: #333;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     }
-  
+
     .skills h2 {
-        margin-bottom: 30px;
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: #444;
     }
-  
+
     .skill-list {
-        display: inline-block;
-        text-align: left;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+        list-style: none;
+        padding: 0;
     }
-  
+
     .skill-list li {
         font-size: 18px;
-        margin: 10px 0;
+        padding: 10px 15px;
+        background: #f7f9fc;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .skill-list li:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+        padding: 60px 20px;
+        background: #f0f4f8;
+    }
+
+    .portfolio h2 {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Footer Section */
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background: #2d2d2d;
+        color: white;
+        font-size: 14px;
+    }
+
+    .footer a {
+        color: #f39c12;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
   </style>
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <div class="brand">Jabez Wekesa</div>
+    <div>
+      <a href="#hero">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
   <!-- Hero Section -->
-  <div class="hero">
+  <div id="hero" class="hero">
     <h1>Jabez Wekesa</h1>
-    <p>Software Engineer | Creating impactful software solutions</p>
+    <p>Software Engineer | Building impactful solutions with code</p>
     <div class="cta">
-      <a href="#portfolio">View My Work</a>
+      <a href="#portfolio">Explore My Work</a>
     </div>
   </div>
 
   <!-- Skills Section -->
-  <div class="skills">
+  <div id="skills" class="skills">
     <h2>Technical Skills</h2>
     <ul class="skill-list">
       <li>JavaScript (Frontend)</li>
@@ -88,6 +217,22 @@
       <li>Flask (Backend)</li>
       <li>CSS (Styling and Design)</li>
     </ul>
+  </div>
+
+  <!-- Portfolio Section -->
+  <div id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300" alt="Project 1">
+      <img src="https://via.placeholder.com/300" alt="Project 2">
+      <img src="https://via.placeholder.com/300" alt="Project 3">
+      <img src="https://via.placeholder.com/300" alt="Project 4">
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div id="contact" class="footer">
+    <p>&copy; 2025 Jabez Wekesa. Built with ❤️ and code. <a href="https://github.com/WekesaJabe" target="_blank">GitHub</a></p>
   </div>
 </body>
 </html>
