@@ -139,15 +139,18 @@
     }
 
     .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
         max-width: 1000px;
         margin: 0 auto;
     }
 
     .gallery img {
-        width: 100%;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s;
@@ -155,6 +158,13 @@
 
     .gallery img:hover {
         transform: scale(1.05);
+    }
+
+    .image-caption {
+        text-align: center;
+        font-size: 14px;
+        color: #555;
+        margin-top: -10px;
     }
 
     /* Footer Section */
@@ -221,12 +231,24 @@
 
   <!-- Portfolio Section -->
   <div id="portfolio" class="portfolio">
-    <h2>Portfolio</h2>
+    <h2>My Photos</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300" alt="Project 1">
-      <img src="https://via.placeholder.com/300" alt="Project 2">
-      <img src="https://via.placeholder.com/300" alt="Project 3">
-      <img src="https://via.placeholder.com/300" alt="Project 4">
+      <div>
+        <img src="IMG_20250115_231231_975.webp" alt="Photo 1">
+        <p class="image-caption">Photo 1</p>
+      </div>
+      <div>
+        <img src="meandbro.jpg" alt="Photo 2">
+        <p class="image-caption">Photo 2</p>
+      </div>
+      <div>
+        <img src="megraduate.jpg" alt="Photo 3">
+        <p class="image-caption">Photo 3</p>
+      </div>
+      <div>
+        <img src="Snapchat-2103323768.jpg" alt="Photo 4">
+        <p class="image-caption">Photo 4</p>
+      </div>
     </div>
   </div>
 
