@@ -179,7 +179,7 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Portfolio Section */
+    /* Inspiration Corner Section */
     .portfolio {
         padding: 60px 20px;
         background: #f0f4f8;
@@ -466,7 +466,7 @@
     <div class="nav-links">
       <a href="#hero">Home</a>
       <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#portfolio">Inspiration</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -481,7 +481,7 @@
     <h1>Jabez Wekesa</h1>
     <p>Software Engineer | Building impactful solutions with code</p>
     <div class="cta">
-      <a href="#portfolio">Explore My Work</a>
+      <a href="#portfolio">Explore Inspiration</a>
     </div>
   </div>
 
@@ -497,25 +497,29 @@
     </ul>
   </div>
 
-  <!-- Portfolio Section -->
+  <!-- Inspiration Corner Section -->
   <div id="portfolio" class="portfolio">
-    <h2>My Photos</h2>
+    <h2>Inspiration Corner</h2>
     <div class="gallery">
+      <!-- Quote 1 -->
       <div>
-        <img src="IMG_20250115_231231_975.webp" alt="Jabez Wekesa at Ollaro Resort in Simba Drive Ongata Rongai" loading="lazy">
-        <p class="image-caption">At Ollaro Resort in Simba Drive Ongata Rongai</p>
+        <img src="beautiful-mountain.webp" alt="Mountain Landscape" loading="lazy">
+        <p class="image-caption">"The mountains are calling, and I must go." – John Muir</p>
       </div>
+      <!-- Quote 2 -->
       <div>
-        <img src="meandbro.jpg" alt="Graduation Day with Big Bro" loading="lazy">
-        <p class="image-caption">Graduation Day with Big Bro</p>
+        <img src="trees.webp" alt="Forest Landscape" loading="lazy">
+        <p class="image-caption">"In every walk with nature, one receives far more than he seeks." – John Muir</p>
       </div>
+      <!-- Quote 3 -->
       <div>
-        <img src="megraduate.jpg" alt="Jabez Wekesa in a graduation gown" loading="lazy">
-        <p class="image-caption">Me in a Gown</p>
+        <img src="pebble-on-beach.webp" alt="Ocean Landscape" loading="lazy">
+        <p class="image-caption">"The ocean stirs the heart, inspires the imagination, and brings eternal joy to the soul." – Wyland</p>
       </div>
+      <!-- Quote 4 -->
       <div>
-        <img src="Snapchat-2103323768.jpg" alt="A Good Weather Out" loading="lazy">
-        <p class="image-caption">A Good Weather Out</p>
+        <img src="sunset.webp" alt="Sunset Landscape" loading="lazy">
+        <p class="image-caption">"Sunset is still my favorite color, and rainbow is second." – Mattie Stepanek</p>
       </div>
     </div>
   </div>
@@ -540,7 +544,9 @@
       <!-- Contact Form -->
       <div class="contact-form">
         <h3>Send a Message</h3>
-        <form action="#" method="POST">
+        <form action="https://formspree.io/f/{your-form-id}" method="POST">
+          <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+          <input type="hidden" name="_subject" value="New Contact Form Submission">
           <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" aria-label="Enter your name" required>
