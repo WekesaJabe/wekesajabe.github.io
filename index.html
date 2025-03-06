@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jabez Wekesa | Software Engineer</title>
+  <meta name="description" content="Jabez Wekesa - Software Engineer specializing in JavaScript, React, Python, and Flask. Explore my portfolio and contact me for collaborations.">
+  <meta name="keywords" content="Jabez Wekesa, Software Engineer, JavaScript, React, Python, Flask, Portfolio">
+  <meta name="author" content="Jabez Wekesa">
+  <meta property="og:title" content="Jabez Wekesa | Software Engineer">
+  <meta property="og:description" content="Building impactful solutions with code. Explore my portfolio and connect with me.">
+  <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     /* General Styles */
@@ -140,16 +148,16 @@
     }
 
     .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
+        padding: 20px;
         max-width: 1000px;
         margin: 0 auto;
     }
 
     .gallery img {
-        width: 250px;
+        width: 100%;
         height: 250px;
         object-fit: cover;
         border-radius: 8px;
@@ -165,45 +173,110 @@
         text-align: center;
         font-size: 14px;
         color: #555;
-        margin-top: -10px;
+        margin-top: 10px;
     }
 
     /* Contact Section */
     .contact {
         text-align: center;
-        padding: 50px 20px;
+        padding: 60px 20px;
         background: #ffffff;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
     .contact h2 {
-        margin-bottom: 30px;
         font-size: 36px;
+        margin-bottom: 40px;
+        color: #444;
     }
 
-    .contact ul {
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 40px;
+        text-align: left;
+    }
+
+    .contact-info, .contact-form {
+        flex: 1;
+        background: #f7f9fc;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-info h3, .contact-form h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .contact-info p {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .contact-info ul {
         list-style: none;
         padding: 0;
-        line-height: 2;
-        font-size: 18px;
     }
 
-    .contact ul li {
+    .contact-info ul li {
         margin-bottom: 15px;
+        font-size: 16px;
     }
 
-    .contact ul li a {
+    .contact-info ul li a {
         color: #2575fc;
         font-weight: bold;
     }
 
-    .contact ul li a:hover {
+    .contact-info ul li a:hover {
         text-decoration: underline;
     }
 
-    .contact i {
+    .contact-info i {
         margin-right: 10px;
-        font-size: 20px;
+        font-size: 18px;
+        color: #f39c12;
+    }
+
+    .contact-form label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .contact-form input, .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .contact-form textarea {
+        resize: vertical;
+    }
+
+    .contact-form button {
+        background: #f39c12;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+        background: #e67e22;
     }
 
     /* Footer Section */
@@ -263,12 +336,16 @@
         }
 
         .gallery img {
-            width: 200px;
             height: 200px;
         }
 
-        .contact ul li {
-            font-size: 16px;
+        .contact-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-info, .contact-form {
+            width: 100%;
         }
     }
   </style>
@@ -311,19 +388,19 @@
     <h2>My Photos</h2>
     <div class="gallery">
       <div>
-        <img src="IMG_20250115_231231_975.webp" alt="Photo 1">
+        <img src="IMG_20250115_231231_975.webp" alt="At Ollaro Resort in Simba Drive Ongata Rongai">
         <p class="image-caption">At Ollaro Resort in Simba Drive Ongata Rongai</p>
       </div>
       <div>
-        <img src="meandbro.jpg" alt="Photo 2">
+        <img src="meandbro.jpg" alt="Graduation Day with Big Bro">
         <p class="image-caption">Graduation Day with Big Bro</p>
       </div>
       <div>
-        <img src="megraduate.jpg" alt="Photo 3">
-        <p class="image-caption">Me in a Gown></p>
+        <img src="megraduate.jpg" alt="Jabez Wekesa in a graduation gown">
+        <p class="image-caption">Me in a Gown</p>
       </div>
       <div>
-        <img src="Snapchat-2103323768.jpg" alt="Photo 4">
+        <img src="Snapchat-2103323768.jpg" alt="A Good Weather Out">
         <p class="image-caption">A Good Weather Out</p>
       </div>
     </div>
@@ -332,18 +409,60 @@
   <!-- Contact Section -->
   <div id="contact" class="contact">
     <h2>Contact Me</h2>
-    <ul>
-      <li><i class="fas fa-phone-alt"></i>Phone: <a href="tel:+254112981529">+254 112 981 529</a></li>
-      <li><i class="fab fa-whatsapp"></i>WhatsApp: <a href="https://wa.me/254112981529" target="_blank">Chat on WhatsApp</a></li>
-      <li><i class="fab fa-instagram"></i>Instagram: <a href="https://www.instagram.com/infinitejabez" target="_blank">infinitejabez</a></li>
-      <li><i class="fab fa-facebook"></i>Facebook: <a href="https://www.facebook.com/share/15XGimMx5G" target="_blank">Facebook Profile</a></li>
-      <li><i class="fab fa-linkedin"></i>LinkedIn: <a href="https://www.linkedin.com/in/jabez-wekesa-a44587328" target="_blank">LinkedIn Profile</a></li>
-    </ul>
+    <div class="contact-container">
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>Feel free to reach out for collaborations, questions, or just to say hi!</p>
+        <ul>
+          <li><i class="fas fa-phone-alt"></i>Phone: <a href="tel:+254112981529">+254 112 981 529</a></li>
+          <li><i class="fab fa-whatsapp"></i>WhatsApp: <a href="https://wa.me/254112981529" target="_blank">Chat on WhatsApp</a></li>
+          <li><i class="fab fa-instagram"></i>Instagram: <a href="https://www.instagram.com/infinitejabez" target="_blank">infinitejabez</a></li>
+          <li><i class="fab fa-facebook"></i>Facebook: <a href="https://www.facebook.com/share/15XGimMx5G" target="_blank">Facebook Profile</a></li>
+          <li><i class="fab fa-linkedin"></i>LinkedIn: <a href="https://www.linkedin.com/in/jabez-wekesa-a44587328" target="_blank">LinkedIn Profile</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
   </div>
 
   <!-- Footer Section -->
   <div class="footer">
-    <p>&copy; 2025 Jabez Wekesa. Built with ❤️ and code. <a href="https://github.com/WekesaJabe" target="_blank">GitHub</a></p>
+    <p>&copy; <span id="currentYear"></span> Jabez Wekesa. Built with ❤️ and code. <a href="https://github.com/WekesaJabe" target="_blank">GitHub</a></p>
   </div>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Dynamic year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
